@@ -1,0 +1,24 @@
+// trigger HTTP Request by pressing  ALT + <key>
+// for <key> the keys 0-9 and F1-F12 are supported
+// for <method> POST, GET, PUT or DEL are supported
+// <data> is the data which is send with the request e.g POST data
+[
+{
+"data":"TOGGLE",
+"key":"1",
+"method":"POST",
+"url":"http://192.168.178.10:8080/rest/items/RCSocketSwitch1"
+},
+{
+"data":"TOGGLE",
+"key":"2",
+"method":"POST",
+"url":"http://192.168.178.10:8080/rest/items/RCSocketSwitch2"
+},
+{
+"data":"TOGGLE",
+"key":"3",
+"method":"POST",
+"url":"http://192.168.178.10:8080/rest/items/RCSocketSwitch3"
+}
+]
