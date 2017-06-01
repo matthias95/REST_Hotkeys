@@ -1,3 +1,8 @@
+/**
+@author Matthias Bernard
+@date May 2017
+*/
+
 #include <windows.h>
 #include <cpprest/http_client.h>
 #include <cpprest/filestream.h>
@@ -63,7 +68,7 @@ using namespace resthotkeys;
 		{
 			ShowWindow(GetConsoleWindow(), SW_SHOW);
 			std::wcout << e.what() << std::endl << std::endl;
-			std::wcout << L"enter r to restore default or e to exit: ";
+			std::wcout << L"enter r to restore default settings file or e to exit: ";
 			wchar_t c = std::toupper(std::wcin.get());
 			switch (c)
 			{

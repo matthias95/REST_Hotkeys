@@ -37,9 +37,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="settingss.json">
+    <None Include="settings.json">
       <Filter>Ressourcendateien</Filter>
     </None>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

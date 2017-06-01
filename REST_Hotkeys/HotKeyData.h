@@ -1,3 +1,8 @@
+/**
+@author Matthias Bernard
+@date May 2017
+*/
+
 #pragma once
 
 #include <iostream>
