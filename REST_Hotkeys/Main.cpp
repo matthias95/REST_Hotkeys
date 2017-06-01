@@ -19,8 +19,10 @@ using namespace resthotkeys;
 	{
 
 		ShowWindow(GetConsoleWindow(), SW_HIDE);
-
-		Settings settings(L"./settings.json");
+		std::wstringstream ss;
+		ss << argv[0];
+		ss << L"\\..\\settings.json";
+		Settings settings(ss.str());
 
 		try
 		{
