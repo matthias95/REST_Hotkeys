@@ -13,6 +13,9 @@ namespace resthotkeys
 	const std::wstring HotKeyData::METHOD{ L"method" };
 
 
+	/**
+	* construct HotKeyData from jsonObject extracted from settings.json
+	*/
 	HotKeyData::HotKeyData(const web::json::value& jsonData) :
 		keyCode{ keyCodeMap.at(Utils::toUpper(jsonData.at(KEY).as_string())) },
 		url{ jsonData.at(URL).as_string() },
@@ -23,6 +26,9 @@ namespace resthotkeys
 
 	};
 
+	/**
+	* send http request corresponding to hotkey
+	*/
 	void HotKeyData::sendHttpRequest()
 	{
 		web::http::client::http_client client{ url, httpClientConfig };

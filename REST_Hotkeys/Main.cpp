@@ -29,10 +29,17 @@ using namespace resthotkeys;
 		ss << L"\\..\\settings.json";
 		Settings settings(ss.str());
 
+		/**
+		* try to read settings.json and register hotkeys
+		* than wait for hotkey in message queue
+		*/
 		try
 		{
 			auto vec = settings.readHotKeyData();
 
+			/**
+			* ALT + BACKSPACE toggels console window
+			*/
 			if (!RegisterHotKey(NULL, 0xff, MOD_ALT | MOD_NOREPEAT, 0x08 /*backspace*/))
 			{
 				throw std::exception("failed to register HotKey!");
